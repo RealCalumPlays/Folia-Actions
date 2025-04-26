@@ -28,9 +28,11 @@ jobs:
         run: ./gradlew build
       - name: Create Folia Jar
         run: ./gradlew createMojmapPaperclipJar --stacktrace --info
+      - name: Zip API & Jar
+        run: zip -r /home/runner/work/Folia-Actions/Folia-Actions.zip /home/runner/work/Folia-Actions/Folia-Actions/Folia-Server/build/libs/ /home/runner/work/Folia-Actions/Folia-Actions/Folia-API/build/libs/
       - name: Upload Folia Jar
         uses: actions/upload-artifact@v4
         with:
-          name: folia.jar
-          path: /home/runner/work/Folia-Actions/Folia-Actions/Folia-Server/build/libs/folia-server-1.21.4-R0.1-SNAPSHOT-dev.jar
+          name: folia.zip
+          path: /home/runner/work/Folia-Actions/Folia-Actions.zip
           retention_days: 1
