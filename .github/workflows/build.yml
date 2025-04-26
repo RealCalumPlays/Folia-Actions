@@ -27,7 +27,7 @@ jobs:
       - name: Build
         run: ./gradlew build
       - name: Create Folia Jar
-        run: ./gradlew createMojmapPaperclipJar --stacktrace --info
+        run: ./gradlew createMojmapBundlerJar --stacktrace --info
       - name: Zip API & Jar
         run: zip -r /home/runner/work/Folia-Actions/Folia-Actions.zip /home/runner/work/Folia-Actions/Folia-Actions/Folia-Server/build/libs/ /home/runner/work/Folia-Actions/Folia-Actions/Folia-API/build/libs/
       - name: Upload Folia Jar
