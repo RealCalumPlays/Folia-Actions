@@ -32,5 +32,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: folia.jar
-          path: folia-server/build/libs/*.jar
+          path: /home/runner/work/Folia-Actions/Folia-Actions/Folia-Server/build/libs/folia-server-1.21.4-R0.1-SNAPSHOT-dev.jar
           retention_days: 1
